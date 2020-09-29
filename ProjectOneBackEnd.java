@@ -23,7 +23,7 @@ public class ProjectOneBackEnd {
      *             table map.
      */
     public ProjectOneBackEnd(String file) {
-        this.hashTable = readCSV(file);
+        this.hashTable = readCSV(file).read();
     }
 
     /**
