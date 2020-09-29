@@ -13,7 +13,15 @@ public class ProjectOneBackEnd {
 
     private HashTableMap<String, CourseReading> hashTable;
 
-
+        // creates an empty hash Table map when a file is not passed in
+    public ProjectOneBackEnd() {
+        this.hashTable = new HashTableMap<String, CourseReading>(1000);
+    }
+    /**
+     * creates a Hash Table map from data stored within the file
+     * @param file the name of the file from which data will be read and then stored as a Hash
+     *             table map.
+     */
     public ProjectOneBackEnd(String file) {
         this.hashTable = readCSV(file);
     }
